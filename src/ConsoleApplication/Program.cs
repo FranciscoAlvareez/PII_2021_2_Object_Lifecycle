@@ -19,9 +19,25 @@ namespace ConsoleApplication
         /// </summary>
         public static void Main()
         {
-            var train = new Train();
-            train.StartEngines();
-            Console.WriteLine("Hello World!");
+            //int length = 100;
+            int length = 100000;
+            for (int i = 0; i <= length; i++)
+            {
+                Train train1 = new Train(i.ToString());
+            }
+            Train t1 = new Train("Last Train To London");
+            Train t2 = new Train("Last Train To London");
+            Train t3 = new Train("Runaway Train");
+            Console.WriteLine(t1==t2);
+            Console.WriteLine(t2==t3);
+            /*
+            tren en creacion: Last Train To London
+            tren en creacion: Last Train To London
+            tren en creacion: Runaway Train
+            False
+            False
+            este console.writeline preguntando la igualdad retorna false ya que cada instancia es unica aunque tengan el mismo identificador.
+            */
         }
     }
 }
